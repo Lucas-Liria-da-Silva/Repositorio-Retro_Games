@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Logout</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="retrogames/css/conta1.css">
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 939px)">
+  </head>
+  <body>
+    <div class="produto-back">
+      <div class="container">
+        <div class="produto">
+          <h1>Fazer Logout?</h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          
+          <button type="button" id="confirmLogout">Sim</button> &nbsp; &nbsp; &nbsp; &nbsp;
+          <button type="button" id="cancelLogout">Não</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Função para lidar com o clique no botão "Sim"
+      document.getElementById('confirmLogout').addEventListener('click', function() {
+        // Aqui você pode adicionar a lógica para realizar o logout no servidor
+        // Por exemplo, limpar cookies ou sessão
+
+        // Redirecionar para a página inicial
+        window.location.href = 'Index.html';
+      });
+
+      // Função para lidar com o clique no botão "Não"
+      document.getElementById('cancelLogout').addEventListener('click', function() {
+        // Redirecionar para a página inicial ou para a página anterior
+        window.location.href = 'Index.html';
+      });
+    </script>
+  </body>
+</html>
