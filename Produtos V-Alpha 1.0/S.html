@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Retro Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .filters {
+            width: 100%;
+            padding: 20px;
+            background: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .filters h2 {
+            margin-top: 0;
+        }
+
+        .filters select, .filters input {
+            width: 200px;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        .filters input[type="text"] {
+            margin-top: 20px;
+        }
+
+        .product-list {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-item {
+            width: calc(33.333% - 20px);
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            transition: transform 0.3s, border 0.3s;
+        }
+
+        .product-item img {
+            width: 200px;
+            height: 300px;
+        }
+
+        .product-item .info {
+            padding: 10px;
+        }
+
+        .product-item h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .product-item p {
+            color: #666;
+        }
+
+        .product-item .price {
+            font-size: 1.5em;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product-item:hover {
+            transform: scale(1.1);
+            border: 2px solid #007bff;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Retro Games</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Novidades</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Minha Conta</a></li>
+                    <li><a href="#">Carrinho</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="products">
+            <div class="filters">
+                <h2>Filtro</h2>
+                <input type="text" id="search-input" placeholder="Buscar produtos...">
+                <select id="category-filter" multiple>
+                    <option value="all">Todos</option>
+                    <option value="action">Ação</option>
+                    <option value="adventure">Aventura</option>
+                    <option value="rpg">RPG</option>
+                    <option value="sports">Esportes</option>
+                    <option value="puzzle">Quebra-Cabeça</option>
+                    <option value="strategy">Estratégia</option>
+                    <option value="horror">Horror</option>
+                    <option value="platformer">Plataforma</option>
+                    <option value="racing">Corrida</option>
+                    <option value="open world">Mundo Aberto</option>
+                    <option value="fps">FPS</option>
+                </select>
+            </div>
+
+            <div class="product-list">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Retro Games. Todos os direitos reservados.</p>
+            <ul>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos e Condições</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const products = [
+                { id: 1, name: 'GTA San Andreas', category: ['action', 'open world'], price: 'R$ 39,99', image: 'images/p1.jpg' },
+                { id: 2, name: 'Halo 3', category: ['fps', 'action','adventure'], price: 'R$ 27,58', image: 'images/p2.jpg' },
+                { id: 3, name: 'Final Fantasy X', category: ['rpg'], price: 'R$ 48,79', image: 'images/p3.jpg' },
+                { id: 4, name: 'Resident Evil 4', category: ['horror', 'action'], price: 'R$ 37,84', image: 'images/p4.jpg' },
+                { id: 5, name: 'Half life 3', category: ['puzzle'], price: 'R$ 45,8', image: 'images/p5.jpg' },
+                { id: 6, name: 'Super Smash Bros', category: ['action'], price: 'R$ 74,8', image: 'images/p6.jpg' },
+                { id: 7, name: 'Silent Hill 2', category: ['horror'], price: 'R$ 69,85', image: 'images/p7.jpg' },
+                { id: 8, name: 'Devil May Cry 3', category: ['horror', 'action'], price: 'R$ 48,9', image: 'images/p8.jpg' },
+                { id: 9, name: 'Pokemon Red', category: ['adventure','open world'], price: 'R$ 17,8', image: 'images/p9.jpg' },
+                { id: 10, name: 'Tony Hawks Pro Skater 2', category: ['sports','action'], price: 'R$ 16,4', image: 'images/p10.jpg' },
+                { id: 11, name: 'Metal  Gear Solid 3', category: ['adventure','action'], price: 'R$ 57,8', image: 'images/p11.jpg' },
+                { id: 12, name: 'Tekken 5', category: ['action'], price: 'R$ 26,04', image: 'images/p12.jpg' },
+                { id: 13, name: 'Prince os Persia', category: ['adventure','action'], price: 'R$ 9,69', image: 'images/p13.jpg' },
+                { id: 14, name: 'Metal  Gear Solid 2', category: ['adventure','action'], price: 'R$ 29,42', image: 'images/p14.jpg' },
+                { id: 15, name: 'Doom 3', category: ['action'], price: 'R$ 00,01', image: 'images/p15.jpg' },
+                { id: 16, name: 'Paper Mario', category: ['adventure'], price: 'R$ 42,87', image: 'images/p16.jpg' }
+            ];
+
+            const productList = document.querySelector('.product-list');
+            const categoryFilter = document.getElementById('category-filter');
+            const searchInput = document.getElementById('search-input');
+
+            function displayProducts(products) {
+                productList.innerHTML = '';
+                products.forEach(product => {
+                    const productItem = document.createElement('div');
+                    productItem.className = 'product-item';
+                    productItem.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}">
+                        <div class="info">
+                            <h3>${product.name}</h3>
+                            <p class="price">${product.price}</p>
+                        </div>
+                    `;
+                    productList.appendChild(productItem);
+                });
+            }
+
+            function filterProducts(categories, search) {
+                let filteredProducts = products;
+
+                if (categories.length > 0 && !categories.includes('all')) {
+                    filteredProducts = filteredProducts.filter(product =>
+                        product.category.some(cat => categories.includes(cat))
+                    );
+                }
+
+                if (search) {
+                    filteredProducts = filteredProducts.filter(product => product.name.toLowerCase().includes(search.toLowerCase()));
+                }
+
+                displayProducts(filteredProducts);
+            }
+
+            categoryFilter.addEventListener('change', function() {
+                const selectedCategories = Array.from(this.selectedOptions).map(option => option.value);
+                filterProducts(selectedCategories, searchInput.value);
+            });
+
+            searchInput.addEventListener('input', function() {
+                const selectedCategories = Array.from(categoryFilter.selectedOptions).map(option => option.value);
+                filterProducts(selectedCategories, this.value);
+            });
+
+            displayProducts(products);
+        });
+    </script>
+</body>
+</html>
