@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="retrogames/css/conta.css">
+    <link rel="stylesheet" href="retrogames/css/home.css">
+    <title>Criar Conta</title>
+</head>
+<body>    
+    <header class="cabecalho">
+        <a href="Home.html"><img id="logo" src="retrogames/css/img/logo.png" alt="Logo"></a>
+        <nav class="menu">
+            <ul class="paginas">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Produtos.html">Produtos</a></li>
+                <li><a href="Sobre.html">Sobre</a></li>
+                <li><a href="Conta.html">Conta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form>
+        <h1 onmousedown="mDown(this)" onmouseup="mUp(this)">Criar conta</h1>
+        <input type="text" oninput="upperCase()" placeholder="Login" id="login">
+        <input type="password" placeholder="Senha" id="senha">
+        <input type="text" placeholder="Pais" id="pais">
+        <input type="text" placeholder="Estado" id="estado">
+        <input type="text" placeholder="CPF" id="cpf">
+        <input type="numb" placeholder="Idade" id="idade">
+        <input type="submit" onclick= "logar(); return false "> 
+    </form>
+    <script>
+
+        {function upperCase() {
+         const upper = document.getElementById("login");
+         upper.value = upper.value.toUpperCase();}
+            }
+
+        function mUp(obj) {
+          obj.innerHTML="What`s a MAN?";
+        }
+        function logar() {
+            var login= document.getElementById('login').value;
+            var senha= document.getElementById('senha').value;
+            var pais= document.getElementById('pais').value;
+            var estado= document.getElementById('estado').value;
+            var cpf= document.getElementById('cpf').value;
+            var idade= document.getElementById('idade').value;
+         if (login.trim() == "" && senha.trim() == "" && pais.trim() =="" && estado.trim()=="" && cpf.trim() == "" && idade.trim()== ""){
+                return alert("Digite todos campos")}
+            if (login.trim() == "");{
+               return alert("Digite o login");
+            }
+            if (senha.trim() == "");{
+                ("Digite a senha");
+            alert("Sucesso, Bem vindo de volta");
+                location.href="Home.html";}
+            }
+        </script>
+        
+</body>
