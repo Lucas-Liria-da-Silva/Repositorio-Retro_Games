@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Retro Games</title>
+    <link rel="stylesheet" href="retrogames/css/produtos.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="Home.html"><img id="logo" src="retrogames/css/img/logo.png" alt="Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Produtos.html">Produtos</a></li>
+                    <li><a href="Login.html">Conta</a></li>
+                    <li><a href="Sobre.html">Sobre</a></li>
+                    <li><a href="#">Carrinho</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="products">
+            <div class="filters">
+                <h2>Filtro</h2>
+                <input type="text" id="search-input" placeholder="Buscar produtos...">
+                <select id="category-filter" multiple>
+                    <option value="all">Todos</option>
+                    <option value="action">Ação</option>
+                    <option value="adventure">Aventura</option>
+                    <option value="rpg">RPG</option>
+                    <option value="sports">Esportes</option>
+                    <option value="puzzle">Quebra-Cabeça</option>
+                    <option value="strategy">Estratégia</option>
+                    <option value="horror">Horror</option>
+                    <option value="platformer">Plataforma</option>
+                    <option value="racing">Corrida</option>
+                    <option value="open world">Mundo Aberto</option>
+                    <option value="fps">FPS</option>
+                </select>
+            </div>
+
+            <div class="product-list">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Retro Games. Todos os direitos reservados.</p>
+            <ul>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos e Condições</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="retrogames/js/produtos.js"></script>
+</body>
+</html>

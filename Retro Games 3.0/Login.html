@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="retrogames/css/nvl.css">
+  </head>
+  <body>
+    <header class="cabecalho">   
+      <img src="retrogames/css/img/controlepixel-removebg-preview.png" id="myImage">
+      
+  <div class="box">
+    <form action=""> 
+      <fieldset>                          <!--Altera o texto com um click-->
+          <legend onclick="this.innerHTML= 'Cake is a lie!'"><b>Formulário de Conta</b></legend>
+          <br>
+          <div class="inputBox">
+              <input type="text" name="nome"  id="nome" class="inputUser" required>
+              <label for="name" class="labelInput">Nome Completo</label>
+          </div>
+          <br><br>
+          <div class="inputBox">
+              <input type="text" name="email"  id="email" class="inputUser" required>
+              <label for="email" class="labelInput">Email</label>
+          </div><br><br>
+             <input type="submit" name="submit" id="submt" onclick="criar(); return false">
+             <br><br> <h4 >Não tem conta?</h4><h4 id="cont" onclick=" conta(); return false">Clique aqui</h4><br><br>
+          <footer class="rodape"></footer>
+          <script src="retrogames/js/login.js"></script>
+                      </form>
+</body>
+</html>

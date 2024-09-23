@@ -1,0 +1,133 @@
+/* Estilização básica do layout */
+body {
+    background-image: url('retrogames/css/img/fundo.png');
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: black;
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    width: 130px;
+    margin-left: 50px;
+}
+
+.menu {
+    margin-right: 50px;
+}
+
+.paginas {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.paginas li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.paginas li a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Estilo dos títulos */
+h2 {
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #333;
+    margin: 20px 0;
+}
+
+/* Parágrafos */
+p {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #444;
+    margin: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+    width; 80%;
+    margin: 0 auto;
+}
+
+/* Links */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Imagens */
+img {
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 1px 2px #0003;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Legendas */
+#Legenda {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px
+    rba(0,0,0, 0.1);
+}
+
+/* Listas */
+ul {
+    list-style-type: disc;
+    margin: 20px;
+    padding-left: 40px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo para a seção de diferenciais */
+ul li b {
+    color: #0066cc;
+}
+
+/* Media queries para telas pequenas */
+@media (max-width: 450px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
