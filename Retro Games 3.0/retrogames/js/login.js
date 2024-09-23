@@ -6,7 +6,7 @@
                   if ( nome == "Matheus" && email == "ma123")
                   {
                    alert("Sucesso em efetuar o login");
-                        location.href= "index.html";
+                        location.href= "Home.html";
                         }else{
                         (isNaN);
                          alert("Falha em efetuar o login, tente novamente");
