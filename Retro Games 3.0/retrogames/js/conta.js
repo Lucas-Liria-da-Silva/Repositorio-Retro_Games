@@ -8,7 +8,7 @@ function criar(){
   var endereco= document.getElementById('endereco').value
   if (nome != "" && email != "" && tel != "" && cidade != "" && estado != "" && endereco != ""){
     window.alert("Bem Vindo " + nome +" \nAprovite nosso catalogo!");
-    location.href= "index.html"
+    location.href= "Home.html"
   }else{
     window.confirm("Por favor preencha todas as caixas");
   }
