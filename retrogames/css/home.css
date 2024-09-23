@@ -1,0 +1,149 @@
+/* Estilização básica do layout */
+body {
+    background-color: lightgray;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+#abla {
+    width: 300px;
+    height: 220px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    height: 100vh;
+}
+
+img {
+    box-shadow: 0 1px 2px #0003;
+    width: 100%;
+}
+
+.swiper {
+    width: 100%;
+    max-width: 1200px;
+    height: 600px; /* Aumentado para ajustar a altura do carrossel */
+    margin: 40px auto;
+    border-radius: 60px;
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 450px) {
+    .swiper {
+        height: 270px;
+    }
+}
+
+header {
+    background-color: black;
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    width: 130px;
+    margin-left: 50px;
+}
+
+.menu {
+    margin-right: 50px;
+}
+
+.paginas {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.paginas li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.paginas li a:hover {
+    background-color: white;
+    color: black;
+}
+
+p.mais-comprados {
+    font-size: 1.5em;
+    font-family: 'Press Start 2P', cursive; /* Nova fonte aplicada ao título */
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+#box {
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    overflow: hidden; /* Para esconder bordas arredondadas se houver overflow */
+    max-width: 1300px;
+    height: 1600px;
+}
+
+.carousel-background {
+    position: absolute;
+    top: 0;
+    margin-left: -150px;
+    width: 1500px;
+    height: 1650px; /* Altura suficiente para cobrir o texto e o carrossel */
+    background-color: white; /* Quadrado branco */
+    z-index: 0;
+}
+
+footer {
+    background: #000000;
+    color: #fff;
+    padding: 20px 0;
+    height: 60px;
+}
+
+#direitos {
+    margin: -20px -100px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: -25px -150px;
+    text-align: right;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    background-color: #fff;
+    color: black;
+}
